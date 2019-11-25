@@ -124,6 +124,25 @@ namespace Kontrollstrukturen
             }
 
 
+            // Schleifen steuern:
+            for (int i = 0; i < 10000; i++)
+            {
+                // Schleife früher beenden:
+                if (i == 99)
+                    break;      // beendet die Schleife
+            }
+
+            for (int i = 0; i < 10000; i++)
+            {
+                // Schleifenschritt überspringen:
+                if (i % 2 == 0) // gerade Zahl
+                    continue;   // gehe zum nächsten durchgang
+
+                Console.WriteLine(i); // nur ungerade Zahlen ausgeben
+
+            }
+
+
             // Enum verwenden:
             Wochentag heute = Wochentag.Montag;
             if (heute == Wochentag.Montag)
@@ -148,12 +167,11 @@ namespace Kontrollstrukturen
                 case Wochentag.Freitag:
                     Console.WriteLine("Fast-Wochenende");
                     break;
-
                 case Wochentag.Samstag:
                 case Wochentag.Sonntag:
                     Console.WriteLine("Wochenende");
                     break;
-                default:
+                default: // Quasi der "else"-Fall
                     break;
             }
 
