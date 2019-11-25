@@ -39,6 +39,23 @@ namespace Kontrollstrukturen
             // Vergleich von Zeichenketten :
             // string.Compare
 
+
+            // Verknüpfungsoperator:
+
+            // Logisches AND &&
+            // Logisches OR  ||
+            // Logisches XOR ^
+            // Invertieren   !
+
+            // Situation: Zahl zwischen 0 und 100
+
+            if( zahl > 0 && zahl < 100)
+            {
+                Console.WriteLine("Die Zahl ist größer als 0 und kleiner als 100");
+            }
+
+
+
             Console.WriteLine("----ENDE----");
             Console.ReadKey();
         }
