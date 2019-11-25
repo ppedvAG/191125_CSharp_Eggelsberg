@@ -86,6 +86,18 @@ namespace HalloWelt
             Console.WriteLine(ergInt);
             Console.WriteLine(ergDbl);
 
+            Console.WriteLine("Die Summe von {0} und  {1} ist {2}", z1, z2, erg);
+
+
+            // int = int + int 
+            int erg5 = 12 + Convert.ToInt32(55.9999);
+            Console.WriteLine(erg5);
+
+            // int = int(double)
+            int erg6 = Convert.ToInt32(12 + 55.9999);
+            Console.WriteLine(erg6);
+
+
             Console.ReadKey();
             // Programm starten: F5
         }
