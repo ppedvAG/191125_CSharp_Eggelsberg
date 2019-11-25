@@ -81,6 +81,8 @@ namespace HalloWelt
             int ergInt = Convert.ToInt32(ganzeZahl + kommazahl);
             double ergDbl = ganzeZahl + kommazahl;
 
+            // Math-Klasse
+
             Console.WriteLine(ergInt);
             Console.WriteLine(ergDbl);
 
