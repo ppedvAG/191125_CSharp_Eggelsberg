@@ -56,6 +56,23 @@ namespace Kontrollstrukturen
 
 
 
+            // Bedinungsgesteuerte Schleife:
+
+            int demoZahl = 10;
+            while(demoZahl < 100)
+            {
+                demoZahl++;
+                Console.WriteLine("Zahl {0} ist kleiner als 100",demoZahl);
+            }
+
+            string passwort = "";
+            while(passwort != "geheim")
+            {
+                Console.WriteLine("Bitte geben Sie Ihr Passwort ein:");
+                passwort = Console.ReadLine();
+            }
+
+
             Console.WriteLine("----ENDE----");
             Console.ReadKey();
         }
