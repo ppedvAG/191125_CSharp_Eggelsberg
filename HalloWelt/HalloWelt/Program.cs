@@ -45,19 +45,44 @@ namespace HalloWelt
             Console.WriteLine(neueZahl);
 
 
-            // Berechnung (falsch !!!!)
+            // Berechnung (Lösung)
 
             Console.WriteLine("Bitte geben Sie zwei Zahlen ein:");
-            string zahl1 = Console.ReadLine();
-            string zahl2 = Console.ReadLine();
+            int zahl1 = int.Parse(Console.ReadLine());
+            int zahl2 = int.Parse(Console.ReadLine());
 
             // -> Berechnung: + Operator
 
-            string ergebnis = zahl1 + zahl2;
+            int ergebnis = zahl1 + zahl2;
 
             Console.WriteLine(ergebnis);
             // Übung: Datentypen korrigieren damit die Berechnung funktioniert 
 
+            // Operatoren:
+
+            int z1 = 5;
+            int z2 = 10;
+
+            int erg = z1 + z2; // Binärer Operator: 2 Zahlen
+
+            Console.WriteLine(z1);
+            z1++;   // Wert um 1 erhöhen
+            // Entspricht: z1 = z1 + 1;
+            Console.WriteLine(z1);
+            z1 += 10; // Wert um 10 erhöhen
+            // Entspricht: z1 = z1 + 10;
+
+            // Datentypen:
+
+            int ganzeZahl = 10;
+            double kommazahl = 5.999;
+
+            // Alternative zu int.parse:
+            int ergInt = Convert.ToInt32(ganzeZahl + kommazahl);
+            double ergDbl = ganzeZahl + kommazahl;
+
+            Console.WriteLine(ergInt);
+            Console.WriteLine(ergDbl);
 
             Console.ReadKey();
             // Programm starten: F5
