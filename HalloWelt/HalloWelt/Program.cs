@@ -9,6 +9,10 @@ namespace HalloWelt
     {
         static void Main(string[] args)
         {
+            // Kommentar : Keine Befehle, sondern Beschreibung
+            Console.WriteLine("HalloWelt");
+            Console.ReadKey();
+            // Programm starten: F5
         }
     }
 }

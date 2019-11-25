@@ -1,1 +1,5 @@
 Email: MichaelZ@ppedv.at
+
+
+Tastenkürzel in VS:
+http://visualstudioshortcuts.com/2017/
