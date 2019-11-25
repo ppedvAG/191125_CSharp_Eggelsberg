@@ -7,6 +7,18 @@ namespace Kontrollstrukturen
 {
     class Program
     {
+        // Definition für das Enum / eigene Datentypen
+        enum Wochentag 
+        { 
+            Montag,
+            Dienstag,
+            Mittwoch,
+            Donnerstag,
+            Freitag,
+            Samstag,
+            Sonntag
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Bitte geben Sie eine Zahl ein:");
@@ -72,6 +84,78 @@ namespace Kontrollstrukturen
                 passwort = Console.ReadLine();
             }
 
+            // Arrays:
+
+            // Schreibweise Variante 1:
+            int[] zahlen1 = new int[5]; // Index: 0,1,2,3,4
+            zahlen1[0] = 5;
+            zahlen1[1] = 10; // Befüllen
+            // ...
+
+            // Schreibweise Variante 2:
+            int[] zahlen2 = new int[] { 5, 10, 15 }; // Größe: 3 , Index: 0,1,2
+
+            // Schreibweise Variante 3:
+            int[] zahlen3 = { 12, 99, 7, 4 }; // Größe: 4, Index: 0,1,2,3
+
+            // Starten F5
+            // Haltepunkt F9
+            // Einzelschritt: F10 oder F11
+
+
+            // in ein Array hineinschreiben
+            zahlen1[3] = 55;
+
+            // ein Array auslesen
+            Console.WriteLine(zahlen1[3]);
+
+
+            // For - Schleife:
+
+            // for + TAB + TAB
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            for (int i = 0; i < zahlen3.Length; i++)
+            {
+                Console.WriteLine(zahlen3[i]);
+            }
+
+
+            // Enum verwenden:
+            Wochentag heute = Wochentag.Montag;
+            if (heute == Wochentag.Montag)
+            {
+                Console.WriteLine("Juhu es ist Montag !!!");
+            }
+            else if (heute == Wochentag.Dienstag)
+                ; // .....
+            else if (heute == Wochentag.Mittwoch)
+                ; // ....
+
+            // Switch: Switch + TAB + TAB
+
+            switch (heute)
+            {
+                case Wochentag.Montag:
+                case Wochentag.Dienstag:
+                case Wochentag.Mittwoch:
+                case Wochentag.Donnerstag:
+                    Console.WriteLine("Unter der Woche");
+                    break;
+                case Wochentag.Freitag:
+                    Console.WriteLine("Fast-Wochenende");
+                    break;
+
+                case Wochentag.Samstag:
+                case Wochentag.Sonntag:
+                    Console.WriteLine("Wochenende");
+                    break;
+                default:
+                    break;
+            }
 
             Console.WriteLine("----ENDE----");
             Console.ReadKey();
