@@ -20,23 +20,23 @@ namespace OOP // Objektorientierte Programmieren
 
             // Eine Person erstellen:
 
-            Person p1 = new Person(); // new Person() um ein neues Personenobjekt zu erstellen
-            p1.Vorname = "Tom";
-            p1.Nachname = "Ate";
+            //Person p1 = new Person(); // new Person() um ein neues Personenobjekt zu erstellen
+            //p1.Vorname = "Tom";
+            //p1.Nachname = "Ate";
 
-            Person p2 = new Person();
-            p2.Vorname = "Anna";
-            p2.Nachname = "Nass";
+            //Person p2 = new Person();
+            //p2.Vorname = "Anna";
+            //p2.Nachname = "Nass";
 
-            Console.WriteLine(p1.Vorname);
-            Console.WriteLine(p2.Vorname);
+            //Console.WriteLine(p1.Vorname);
+            //Console.WriteLine(p2.Vorname);
 
-            p1.Alter = 50;
-            p2.Alter = 50;
-            Console.WriteLine(p1.Alter);
-            p1.Geburtstag();
-            Console.WriteLine(p1.Alter);
-            Console.WriteLine(p2.Alter);
+            //p1.Alter = 50;
+            //p2.Alter = 50;
+            //Console.WriteLine(p1.Alter);
+            //p1.Geburtstag();
+            //Console.WriteLine(p1.Alter);
+            //Console.WriteLine(p2.Alter);
 
 
             //// Array von Personen
@@ -48,6 +48,27 @@ namespace OOP // Objektorientierte Programmieren
 
             //allePersonen[0].Vorname = "demo";
             //// ....
+
+
+
+            // Properties - Variante "Methode" (z.B. wie in Java)
+
+            //Person p1 = new Person();
+            // p1.Kontostand = 10000;
+            // p1.Kontostand = -99999999;
+
+            //p1.KontostandSetzen(500);
+            //p1.KontostandSetzen(2000);
+            //p1.KontostandAuslesen()) ;
+            //p1.KontostandSetzen(-99999999999);
+
+
+            // Properties in C#:
+            Person p1 = new Person();
+
+            p1.Kontostand = 55; // in Wirklichkeit: set;
+
+            Console.WriteLine(p1.Kontostand); // in Wirklichkeit: get;
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
