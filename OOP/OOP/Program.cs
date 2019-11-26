@@ -72,15 +72,28 @@ namespace OOP // Objektorientierte Programmieren
 
 
             // Vererbung:
+            //Kunde k1 = new Kunde();
+            //k1.MachEtwasMitEinemKunden();
+            //k1.MachEtwasMitEinemKunden();
+            //k1.MachEtwasMitEinemKunden();
 
-            Kunde k1 = new Kunde();
-            k1.MachEtwasMitEinemKunden();
-            k1.MachEtwasMitEinemKunden();
-            k1.MachEtwasMitEinemKunden();
+            //Console.WriteLine(k1.Alter);
+            //k1.Geburtstag();
+            //Console.WriteLine(k1.Alter);
 
-            Console.WriteLine(k1.Alter);
-            k1.Geburtstag();
-            Console.WriteLine(k1.Alter);
+
+
+            // Abstrakte Klasse:
+
+           // Grafik g1 = new Grafik();
+            Kreis k1 = new Kreis();
+            Rechteck r1 = new Rechteck();
+
+            k1.Zeichnen();
+            r1.Zeichnen();
+
+            k1.Machwas();
+            r1.Machwas();
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
