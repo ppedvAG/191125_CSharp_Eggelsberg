@@ -64,7 +64,7 @@ namespace OOP // Objektorientierte Programmieren
 
 
             // Properties in C#:
-            Person p1 = new Person();
+            Person p1 = new Person(120);
 
             p1.Kontostand = 55; // in Wirklichkeit: set;
 

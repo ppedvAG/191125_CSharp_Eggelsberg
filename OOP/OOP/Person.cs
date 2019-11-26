@@ -7,9 +7,41 @@ namespace OOP
 {
     class Person
     {
+        // Konstruktor:
+        // ctor + TAB + TAB
+
+        public Person(byte alter) // Ideal für Startwerte
+        {
+            Vorname = "Max";
+            Nachname = "Mustermann";
+            Alter = alter;
+        }
+
+        public Person(string vn, string nn) // Ideal für Startwerte
+        {
+            Vorname = vn;
+            Nachname = nn;
+            Alter = 0;
+        }
+
+        public Person(decimal Kontostand, string vorname, string nachname, byte alter)
+        {
+            this.Kontostand = Kontostand; // Kontostand == Parameter, this.Kontostand == Property
+            Vorname = vorname;
+            Nachname = nachname;
+            Alter = alter;
+        }
+
+
+        // Erstellen von einem Konstruktor:
+        // ab VS 2015
+        // Rechtsklick -> Quick Actions and Refactoring -> Generate Constructor
+
+
+
         // private ist der Standardfall wenn wir nichts hinschreiben
-        //private string Vorname;
-        //private string Nachname;
+        // private string Vorname;
+        // private string Nachname;
         // private byte Alter;
 
 
@@ -43,11 +75,21 @@ namespace OOP
             set { vorname = value; }
         }
 
+        public string Nachname { get; set; }
         // Autoproperty:
         // prop + TAB + TAB
 
         public byte Alter { get; set; } // Kurzfassung für das volle Property
 
+
+        // ReadOnly-Property:
+        public string GanzerName
+        {
+            get
+            {
+                return Vorname + " " + Nachname;
+            }
+        }
 
 
 
