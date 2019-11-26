@@ -70,6 +70,18 @@ namespace OOP // Objektorientierte Programmieren
 
             Console.WriteLine(p1.Kontostand); // in Wirklichkeit: get;
 
+
+            // Vererbung:
+
+            Kunde k1 = new Kunde();
+            k1.MachEtwasMitEinemKunden();
+            k1.MachEtwasMitEinemKunden();
+            k1.MachEtwasMitEinemKunden();
+
+            Console.WriteLine(k1.Alter);
+            k1.Geburtstag();
+            Console.WriteLine(k1.Alter);
+
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }

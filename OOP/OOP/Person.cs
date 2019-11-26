@@ -9,6 +9,10 @@ namespace OOP
     {
         // Konstruktor:
         // ctor + TAB + TAB
+        public Person()
+        {
+            // Führt dazu, dass bei der Vererbung immer dieser Konstruktor genommen wird !!!
+        }
 
         public Person(byte alter) // Ideal für Startwerte
         {
@@ -110,8 +114,8 @@ namespace OOP
         //}
 
 
-
-        public void Geburtstag()
+            // virtual macht die Logik überschreibar
+        public virtual void Geburtstag()
         {
             Alter++;
         }
