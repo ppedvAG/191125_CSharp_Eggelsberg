@@ -37,6 +37,43 @@ namespace KomplexeDatentypen
             // zahlenListe.Clear(); // Alles löschen
             // zahlenListe.Sort(); // Sortieren der Liste
 
+            // Andwendungsfall:
+            // Praktisch für Fälle wo die Anzahl der Elemente unbekannt ist
+
+            // Mini-Übung:
+            // Benutzer soll solange Zahlen in eine Liste einfügen, bis er
+            // "q" eingibt
+
+            // -> Aus allen Zahlen der Liste der Durchschnitt berechnet
+
+
+            List<double> alleEingaben = new List<double>();
+            string eingabe;
+
+
+
+            do
+            {
+
+                Console.WriteLine("Bitte geben Sie eine Zahl oder 'q' fürs Beenden ein:");
+                eingabe = Console.ReadLine();
+
+                if (eingabe == "q")
+                {
+                    // ENDE
+                    // Endberechnung: 
+                    Console.WriteLine("Der Durchschnitt ist: " + alleEingaben.Average());
+                }
+                else
+                {
+                    // Zahl für die Liste
+                    alleEingaben.Add(double.Parse(eingabe));
+                }
+            } while (eingabe != "q");
+
+
+
+
             Console.WriteLine("---ANFANG---");
             Console.ReadKey();
         }
