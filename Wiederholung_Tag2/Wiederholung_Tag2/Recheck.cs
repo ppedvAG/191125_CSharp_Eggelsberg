@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Wiederholung_Tag2
 {
-    class Recheck : Grafik
+    class Recheck : Grafik , IZeichenbar
     {
         public Recheck(string Farbe) : base(Farbe)
         {
@@ -13,6 +13,11 @@ namespace Wiederholung_Tag2
 
         public int Höhe { get; set; }
         public int Breite { get; set; }
+
+        public double FlächeBerechnen()
+        {
+            return Höhe * Breite;
+        }
 
         public override void Zeichnen()
         {

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Wiederholung_Tag2
 {
-    class Kreis : Grafik // Vererbung
+    class Kreis : Grafik, IZeichenbar // Vererbung
     {
         public Kreis(string Farbe) : base(Farbe) // Gibt die Farbe an den Original-Konstruktor weiter
         {
@@ -14,22 +14,15 @@ namespace Wiederholung_Tag2
 
         public int Radius { get; set; }
 
+        public double FlächeBerechnen()
+        {
+            return Math.PI * Radius * Radius;
+        }
+
         public override void Zeichnen()
         {
             //base.Zeichnen(); // Original aufgerufen
             Console.WriteLine("Ein Kreis mit der Farbe " + Farbe + " und dem Radius " + Radius + " wird gezeichnet");
         }
-
-
-
-        private int myVar;
-
-        public int MyProperty
-        {
-            get { return myVar; }
-            set { myVar = value; }
-        }
-
-
     }
 }
