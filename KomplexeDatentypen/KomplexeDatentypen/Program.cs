@@ -127,7 +127,24 @@ namespace KomplexeDatentypen
 
             Person personAusDerTable = (Person)ht[123];
 
+            /// --------------- Beispielcode:
+            /// 
 
+
+            List<JugendKonto> alleJK = new List<JugendKonto>();
+
+            alleJK.Add(new JugendKonto("Max Mustermann",1));
+            alleJK.Add(new JugendKonto("Max Mustermann",2));
+            alleJK.Add(new JugendKonto("Max Mustermann",3));
+            alleJK.Add(new JugendKonto("Max Mustermann",4));
+
+
+            List<GiroKonto> alleGK = new List<GiroKonto>();
+
+            alleGK.Add(new GiroKonto("Max Mustermann", 2000));
+            alleGK.Add(new GiroKonto("Max Mustermann", 2000));
+            alleGK.Add(new GiroKonto("Max Mustermann", 2000));
+            alleGK.Add(new GiroKonto("Max Mustermann", 2000));
 
             Console.WriteLine("---ANFANG---");
             Console.ReadKey();
