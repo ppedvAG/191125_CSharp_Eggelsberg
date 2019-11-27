@@ -9,14 +9,16 @@ namespace Interfaces
     {
         static void Main(string[] args)
         {
-            LebensmittelHändler max = new LebensmittelHändler();
+            Produkthändler max = new Produkthändler();
             max.Produkt = new Obst("Apfel",1,"Steiermark",70);
 
-            LebensmittelHändler moritz = new LebensmittelHändler();
+            Produkthändler moritz = new Produkthändler();
             moritz.Produkt = new Gemüse("Gurke", 1, false);
 
-            LebensmittelHändler julia = new LebensmittelHändler();
-            julia.Produkt = new Obst("Orange", 3, "Spanien", 90);
+            Produkthändler julia = new Produkthändler();
+            julia.Produkt = new Autoreifen(false, "Michelin", 200);
+
+            
 
             Console.WriteLine("----------ENDE-----------");
             Console.ReadKey();

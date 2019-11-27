@@ -5,13 +5,13 @@ using System.Text;
 
 namespace Interfaces
 {
-    class LebensmittelHändler
+    class Produkthändler
     {
         public int Anzahl { get; set; }
-        public Lebensmittel Produkt { get; set; }
+        public IProdukt Produkt { get; set; }
     }
 
-    class Lebensmittel
+    class Lebensmittel : IProdukt
     {
         public string Name { get; set; }
         public decimal Preis { get; set; }
@@ -39,5 +39,23 @@ namespace Interfaces
             Bitter = bitter;
         }
         public bool Bitter { get; set; }
+    }
+
+    // Trick für das Erstellen von Interfaces:
+    // QuickActions auf Klassenname -> Extract Interface
+    class Autoreifen : IProdukt
+    {
+        public Autoreifen(bool sommerreifen, string name, decimal preis)
+        {
+            Sommerreifen = sommerreifen;
+            Name = name;
+            Preis = preis;
+        }
+
+        public bool Sommerreifen { get; set; }
+        public string Hersteller { get; set; }
+
+        public string Name { get; set; }
+        public decimal Preis { get; set; }
     }
 }
