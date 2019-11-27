@@ -18,7 +18,17 @@ namespace Interfaces
             Produkthändler julia = new Produkthändler();
             julia.Produkt = new Autoreifen(false, "Michelin", 200);
 
-            
+            if(moritz.Produkt is Gemüse)
+            {
+                Console.WriteLine("Moritz verkauft Gemüse");
+                // Casten:
+
+                Gemüse g = (Gemüse)moritz.Produkt;
+                Console.WriteLine(g.Name + " " + g.Preis + " " + g.Bitter);
+                Console.WriteLine(((Gemüse)moritz.Produkt).Bitter); // Andere Schreibweise
+            }
+            else
+                Console.WriteLine("Moritz verkauft etwas anderes");
 
             Console.WriteLine("----------ENDE-----------");
             Console.ReadKey();
