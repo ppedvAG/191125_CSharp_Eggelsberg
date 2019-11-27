@@ -19,7 +19,8 @@ namespace Wiederholung_Tag2
             return Höhe * Breite;
         }
 
-        public override void Zeichnen()
+        // Verstecken / "hides"
+        public void Zeichnen()
         {
             Console.WriteLine("Ein Rechteck mit der Farbe " + Farbe + ", der Höhe " + Höhe + " und der Breite " + Breite + " wird gezeichnet");
         }

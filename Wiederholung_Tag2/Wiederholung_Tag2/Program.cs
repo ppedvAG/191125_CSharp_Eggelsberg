@@ -17,22 +17,24 @@ namespace Wiederholung_Tag2
             r1.Breite = 20;
 
             g1.Zeichnen();
+            Console.WriteLine("\tÜberschreiben: Spezialversion vom Kreis:");
             k1.Zeichnen();
+            Console.WriteLine("\tVerstecken: Spezialversion vom Rechteck:");
             r1.Zeichnen();
 
-            Console.WriteLine(k1.FlächeBerechnen() + "cm²");
-            Console.WriteLine(r1.FlächeBerechnen() + "cm²");
+            // Console.WriteLine(k1.FlächeBerechnen() + "cm²");
+            // Console.WriteLine(r1.FlächeBerechnen() + "cm²");
 
             // Polymorphie:
 
             Console.WriteLine("-------------------Polymorphie------------------");
             Grafik g2 = new Kreis("Violett"); // Geht, da ein Kreis alles kann, was eine Grafik kann (+ bissi mehr)
-            g2.Zeichnen();
+            g2.Zeichnen(); // Kreisvariante
 
             // Kreis k2 = new Grafik("Orange"); // Geht nicht, da die Grafik nicht alles kann, was ein Kreis kann
 
-            IZeichenbar zeichnung = new Recheck("Grau");
-            zeichnung.
+            Grafik g3 = new Recheck("Pink");
+            g3.Zeichnen(); // Grafikvariante
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
