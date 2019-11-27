@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,32 +48,84 @@ namespace KomplexeDatentypen
             // -> Aus allen Zahlen der Liste der Durchschnitt berechnet
 
 
-            List<double> alleEingaben = new List<double>();
-            string eingabe;
+            //List<double> alleEingaben = new List<double>();
+            //string eingabe;
 
 
 
-            do
-            {
+            //do
+            //{
 
-                Console.WriteLine("Bitte geben Sie eine Zahl oder 'q' fürs Beenden ein:");
-                eingabe = Console.ReadLine();
+            //    Console.WriteLine("Bitte geben Sie eine Zahl oder 'q' fürs Beenden ein:");
+            //    eingabe = Console.ReadLine();
 
-                if (eingabe == "q")
-                {
-                    // ENDE
-                    // Endberechnung: 
-                    Console.WriteLine("Der Durchschnitt ist: " + alleEingaben.Average());
-                }
-                else
-                {
-                    // Zahl für die Liste
-                    alleEingaben.Add(double.Parse(eingabe));
-                }
-            } while (eingabe != "q");
+            //    if (eingabe == "q")
+            //    {
+            //        // ENDE
+            //        // Endberechnung: 
+            //        Console.WriteLine("Der Durchschnitt ist: " + alleEingaben.Average());
+            //    }
+            //    else
+            //    {
+            //        // Zahl für die Liste
+            //        alleEingaben.Add(double.Parse(eingabe));
+            //    }
+            //} while (eingabe != "q");
 
 
 
+            // Stack<t>
+
+            Stack<string> stringStack = new Stack<string>();
+
+            stringStack.Push("Hallo");
+            stringStack.Push("Welt");
+            stringStack.Push("!");
+
+            Console.WriteLine(stringStack.Pop());
+            Console.WriteLine(stringStack.Pop());
+            Console.WriteLine(stringStack.Pop());
+
+            // Queue<T>
+
+            Queue<double> doubleQueue = new Queue<double>();
+
+            doubleQueue.Enqueue(123.123);
+            doubleQueue.Enqueue(9999);
+            doubleQueue.Enqueue(98765);
+
+            Console.WriteLine(doubleQueue.Dequeue());
+            Console.WriteLine(doubleQueue.Dequeue());
+            Console.WriteLine(doubleQueue.Dequeue());
+
+
+            // Dictionary<TKey,TValue>
+            Dictionary<string, string> übersetzer = new Dictionary<string, string>();
+
+            übersetzer.Add("Hallo",     "Hello");
+            übersetzer.Add("Welt",      "World");
+            übersetzer.Add("!",         "!!!");
+            übersetzer.Add("Das ist ein Test", "This is a demonstration.");
+
+            Console.WriteLine(übersetzer["Hallo"]);
+
+            Dictionary<int, Person> personenVerzeichnis = new Dictionary<int, Person>();
+            personenVerzeichnis.Add(100, new Person());
+            personenVerzeichnis.Add(101, new Person());
+
+
+            personenVerzeichnis[100].Vorname = "Tom";
+            personenVerzeichnis[100].Geburtstag();
+
+
+            // HashTable
+
+            Hashtable ht = new Hashtable();
+
+            ht.Add(123, "Hallo Welt");
+            ht.Add(456, new Person());
+
+            Person personAusDerTable = (Person)ht[123];
 
             Console.WriteLine("---ANFANG---");
             Console.ReadKey();
