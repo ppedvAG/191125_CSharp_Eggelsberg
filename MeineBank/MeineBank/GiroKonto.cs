@@ -21,6 +21,9 @@ namespace MeineBank
             //float zahl5 = 123.123F;
             //decimal zahl6 = 123.123M;
 
+            if (betrag < 0)
+                throw new ArgumentException("Sie dürfen keinen negativen Betrag überweisen");
+
             this.Abheben(betrag * 1.03m); // + Überweisungsgebühr von 3%
             zielKonto.Einzahlen(betrag);
         }

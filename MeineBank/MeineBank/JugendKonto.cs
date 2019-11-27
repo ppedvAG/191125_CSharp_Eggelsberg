@@ -15,11 +15,13 @@ namespace MeineBank
         {
             if(betrag > 100)
             {
-                Console.WriteLine("Sie dürfen nicht mehr als 100€ überweisen");
+                throw new InvalidOperationException("Sie dürfen nicht mehr als 100€ überweisen");
+                // Console.WriteLine("Sie dürfen nicht mehr als 100€ überweisen");
             }
             else if (betrag > Kontostand)
             {
-                Console.WriteLine("Sie dürfen nicht mehr überweisen als Sie besitzen");
+                throw new InvalidOperationException("Sie dürfen nicht mehr überweisen als Sie besitzen");
+                //Console.WriteLine("Sie dürfen nicht mehr überweisen als Sie besitzen");
             }
             else // Alles Geht
             {

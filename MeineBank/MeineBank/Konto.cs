@@ -36,11 +36,12 @@ namespace MeineBank
         // Methode
         public void Einzahlen(decimal betrag)
         {
-            if(betrag > 0)
+            if (betrag > 0)
                 Kontostand += betrag;
-                // Kontostand = Kontostand + betrag;
+            // Kontostand = Kontostand + betrag;
             else
-                Console.WriteLine("Sie dürfen keinen negativen Betrag einzahlen !!!");
+                throw new ArgumentException("Sie dürfen keinen negativen Betrag einzahlen !!!");
+                // Console.WriteLine("Sie dürfen keinen negativen Betrag einzahlen !!!");
         }
 
         // Methode
@@ -49,7 +50,8 @@ namespace MeineBank
             if (betrag > 0)
                 Kontostand -= betrag;
             else
-                Console.WriteLine("Sie dürfen keinen negativen Betrag abheben");
+                throw new ArgumentException("Sie dürfen keinen negativen Betrag abheben");
+            //Console.WriteLine("Sie dürfen keinen negativen Betrag abheben");
         }
 
         public virtual void Überweisung(decimal betrag, Konto zielKonto)
@@ -62,6 +64,10 @@ namespace MeineBank
             // -> Abheben ()
 
             //Eigenes Konto (this. == aktuelle Instanz)
+
+            if(betrag < 0)
+                throw new ArgumentException("Sie dürfen keinen negativen Betrag überweisen");
+
             this.Abheben(betrag);
             //Fremdes Konto
             zielKonto.Einzahlen(betrag);
