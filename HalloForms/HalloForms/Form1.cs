@@ -26,8 +26,14 @@ namespace HalloForms
         }
 
         private void buttonDemo_Click(object sender, EventArgs e)
-        { 
-            MessageBox.Show(textBoxEingabe.Text);
+        {
+            //int zahl1 = Convert.ToInt32(textBoxZahl1.Text);
+            //int zahl2 =  int.Parse( textBoxZahl2.Text);
+
+
+            //textBoxErgebnis.Text = zahl1 + zahl2;
+
+            //MessageBox.Show(zahl1 + zahl2);
         }
     }
 }
