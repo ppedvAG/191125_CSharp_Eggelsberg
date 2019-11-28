@@ -34,6 +34,8 @@
             this.öffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxInhalt = new System.Windows.Forms.TextBox();
+            this.personAlsXMLSpeichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personAusXMLLesenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +43,9 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dateiToolStripMenuItem});
+            this.dateiToolStripMenuItem,
+            this.personAlsXMLSpeichernToolStripMenuItem,
+            this.personAusXMLLesenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -88,6 +92,20 @@
             this.textBoxInhalt.Size = new System.Drawing.Size(800, 426);
             this.textBoxInhalt.TabIndex = 1;
             // 
+            // personAlsXMLSpeichernToolStripMenuItem
+            // 
+            this.personAlsXMLSpeichernToolStripMenuItem.Name = "personAlsXMLSpeichernToolStripMenuItem";
+            this.personAlsXMLSpeichernToolStripMenuItem.Size = new System.Drawing.Size(153, 20);
+            this.personAlsXMLSpeichernToolStripMenuItem.Text = "Person als XML speichern";
+            this.personAlsXMLSpeichernToolStripMenuItem.Click += new System.EventHandler(this.personAlsXMLSpeichernToolStripMenuItem_Click);
+            // 
+            // personAusXMLLesenToolStripMenuItem
+            // 
+            this.personAusXMLLesenToolStripMenuItem.Name = "personAusXMLLesenToolStripMenuItem";
+            this.personAusXMLLesenToolStripMenuItem.Size = new System.Drawing.Size(133, 20);
+            this.personAusXMLLesenToolStripMenuItem.Text = "Person aus XML lesen";
+            this.personAusXMLLesenToolStripMenuItem.Click += new System.EventHandler(this.personAusXMLLesenToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +131,8 @@
         private System.Windows.Forms.ToolStripMenuItem öffnenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem beendenToolStripMenuItem;
         private System.Windows.Forms.TextBox textBoxInhalt;
+        private System.Windows.Forms.ToolStripMenuItem personAlsXMLSpeichernToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personAusXMLLesenToolStripMenuItem;
     }
 }
 
