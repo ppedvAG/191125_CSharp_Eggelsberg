@@ -14,9 +14,9 @@ namespace FortgeschritteneFeatures
             return input * 2;
         }
 
-        public static string Umdrehen(this string input)
-        {
-            // .....
-        }
+        //public static string Umdrehen(this string input)
+        //{
+        //    // .....
+        //}
     }
 }

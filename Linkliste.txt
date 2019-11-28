@@ -6,3 +6,7 @@ http://visualstudioshortcuts.com/2017/
 
 Erstelle von Office-Dokumenten in C#:
 https://docs.microsoft.com/en-us/office/open-xml/open-xml-sdk
+
+LINQ -Beispiele für Syntax und Code:
+https://linqsamples.com
+http://linq101.nilzorblog.com/linq101-lambda.php
