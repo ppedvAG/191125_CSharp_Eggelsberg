@@ -10,7 +10,13 @@ namespace FortgeschritteneFeatures
         static void Main(string[] args)
         {
 
+            // Erweiterungsmethoden:
+            int zahl = 42;
 
+            Console.WriteLine(zahl.Verdoppeln());
+
+            string Text = "Hallo Welt";
+            Text.Umdrehen();
 
             Console.WriteLine("---ANFANG---");
             Console.ReadKey();
