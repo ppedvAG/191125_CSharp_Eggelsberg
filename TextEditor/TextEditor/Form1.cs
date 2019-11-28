@@ -15,5 +15,20 @@ namespace TextEditor
         {
             InitializeComponent();
         }
+
+        private void speichernToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void öffnenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void beendenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
