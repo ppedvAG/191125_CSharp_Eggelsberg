@@ -67,26 +67,39 @@ namespace TextEditor
             p1.Alter = 10;
             p1.Kontostand = 100;
 
+            Person p2 = new Person();
+            p2.Vorname = "Anna";
+            p2.Nachname = "Nass";
+            p2.Alter = 20;
+            p2.Kontostand = 200;
+
+            Person p3 = new Person();
+            p3.Vorname = "Peter";
+            p3.Nachname = "Silie";
+            p3.Alter = 30;
+            p3.Kontostand = 300;
+
+            Person[] allePersonen = { p1, p2, p3 };  // Alle Personen zu einem Array machen
             // Person als XML speichern:
             // XMLSerializer
 
-            XmlSerializer serializer = new XmlSerializer(typeof(Person));
+            XmlSerializer serializer = new XmlSerializer(typeof(Person[]));
             FileStream stream = new FileStream("Person.xml", FileMode.Create);
 
-            serializer.Serialize(stream, p1);
+            serializer.Serialize(stream, allePersonen);
             stream.Close();
         }
 
         private void personAusXMLLesenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(Person));
+            XmlSerializer serializer = new XmlSerializer(typeof(Person[]));
             FileStream stream = new FileStream("Person.xml", FileMode.Open);
 
             // Cast
-            Person p1 = (Person)serializer.Deserialize(stream);
+            Person[] allePersonen = (Person[])serializer.Deserialize(stream);
             stream.Close();
 
-            MessageBox.Show(p1.Vorname + " " + p1.Nachname);
+            MessageBox.Show(allePersonen[0].Vorname + " " + allePersonen[0].Nachname);
         }
     }
 }
