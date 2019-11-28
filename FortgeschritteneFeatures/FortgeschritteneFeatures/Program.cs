@@ -46,6 +46,11 @@ namespace FortgeschritteneFeatures
 
             Person[] ergebnisPersonen = ergebnis2.ToArray();
 
+
+            GenerischeKlasse<string> demo1 = new GenerischeKlasse<string>();
+
+            demo1.
+
             Console.WriteLine("---ANFANG---");
             Console.ReadKey();
         }
