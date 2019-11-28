@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.buttonKlickMich = new System.Windows.Forms.Button();
+            this.buttonDemo = new System.Windows.Forms.Button();
+            this.textBoxEingabe = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonKlickMich
@@ -44,21 +46,43 @@
             this.buttonKlickMich.UseVisualStyleBackColor = false;
             this.buttonKlickMich.Click += new System.EventHandler(this.buttonKlickMich_Click);
             // 
+            // buttonDemo
+            // 
+            this.buttonDemo.Location = new System.Drawing.Point(160, 187);
+            this.buttonDemo.Name = "buttonDemo";
+            this.buttonDemo.Size = new System.Drawing.Size(180, 23);
+            this.buttonDemo.TabIndex = 1;
+            this.buttonDemo.Text = "button1";
+            this.buttonDemo.UseVisualStyleBackColor = true;
+            this.buttonDemo.Click += new System.EventHandler(this.buttonDemo_Click);
+            // 
+            // textBoxEingabe
+            // 
+            this.textBoxEingabe.Location = new System.Drawing.Point(44, 187);
+            this.textBoxEingabe.Name = "textBoxEingabe";
+            this.textBoxEingabe.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEingabe.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxEingabe);
+            this.Controls.Add(this.buttonDemo);
             this.Controls.Add(this.buttonKlickMich);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button buttonKlickMich;
+        private System.Windows.Forms.Button buttonDemo;
+        private System.Windows.Forms.TextBox textBoxEingabe;
     }
 }
 

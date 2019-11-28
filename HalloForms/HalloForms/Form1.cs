@@ -24,5 +24,10 @@ namespace HalloForms
                             MessageBoxButtons.YesNo,
                             MessageBoxIcon.Question);
         }
+
+        private void buttonDemo_Click(object sender, EventArgs e)
+        { 
+            MessageBox.Show(textBoxEingabe.Text);
+        }
     }
 }
