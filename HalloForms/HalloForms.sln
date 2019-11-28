@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloForms", "HalloForms\HalloForms.csproj", "{FDF71DA0-C473-4D3E-918D-65F071969C98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDF71DA0-C473-4D3E-918D-65F071969C98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDF71DA0-C473-4D3E-918D-65F071969C98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDF71DA0-C473-4D3E-918D-65F071969C98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDF71DA0-C473-4D3E-918D-65F071969C98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C42BA21-F4A1-4424-B40B-3E7D6914DE17}
+	EndGlobalSection
+EndGlobal
